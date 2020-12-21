@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { getFilms } from './queries/postsQuery'
-import './App.css'
+import { getFilms } from './queries/filmsQuery'
+import './css/style.css'
 import Film from './components/Film'
 
 function App() {
