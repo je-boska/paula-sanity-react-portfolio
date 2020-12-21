@@ -63,13 +63,25 @@ export default {
       title: 'Video Embed',
       type: 'string',
     },
+    {
+      name: 'order',
+      title: 'Order',
+      type: 'number',
+    },
+  ],
+  orderings: [
+    {
+      title: 'Order',
+      name: 'orderAsc',
+      by: [{ field: 'order', direction: 'desc' }],
+    },
   ],
 
   preview: {
     select: {
       title: 'title',
       author: 'author.name',
-      media: 'mainImage',
+      media: 'image1',
     },
     prepare(selection) {
       const { author } = selection

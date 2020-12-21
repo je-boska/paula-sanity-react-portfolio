@@ -29,8 +29,10 @@ export const getFilms = async () => {
                   alt
               },
               embed,
-              body
+              body,
+              order
           }`
   )
+  films.sort((a, b) => b.order - a.order)
   return films
 }

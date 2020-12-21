@@ -2,12 +2,12 @@ import React from 'react'
 import BlockContent from '@sanity/block-content-to-react'
 
 const Film = ({ film }) => {
-  const { image1, image2, image3, title, body, embed } = film
+  const { image1, image2, image3, title, slug, body, embed } = film
 
   const thumbnails = [image1, image2, image3]
 
   return (
-    <div>
+    <div id={slug.current} className='project'>
       <div className='thumbnails'>
         {thumbnails.map(thumbnail => (
           <div
@@ -22,9 +22,14 @@ const Film = ({ film }) => {
           </div>
         ))}
       </div>
-      <div dangerouslySetInnerHTML={{ __html: embed }}></div>
-      <h1>{title}</h1>
-      <BlockContent blocks={body} />
+      <div
+        className='embed fade-in-element'
+        dangerouslySetInnerHTML={{ __html: embed }}
+      ></div>
+      <div className='project-text fade-in-element'>
+        <h2>{title}</h2>
+        <BlockContent blocks={body} />
+      </div>
     </div>
   )
 }
