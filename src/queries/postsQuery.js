@@ -1,20 +1,36 @@
 import sanityClient from '../client'
+import groq from 'groq'
 
-export const getPosts = async () => {
-  const posts = await sanityClient.fetch(
-    `*[_type == "post"]{
+export const getFilms = async () => {
+  const films = await sanityClient.fetch(
+    groq`*[_type == "film"]{
               _id,
               title,
               slug,
-              mainImage{
+              image1{
                   asset->{
                       _id,
                       url
                   },
                   alt
               },
+              image2{
+                  asset->{
+                      _id,
+                      url
+                  },
+                  alt
+              },
+              image3{
+                  asset->{
+                      _id,
+                      url
+                  },
+                  alt
+              },
+              embed,
               body
           }`
   )
-  return posts
+  return films
 }

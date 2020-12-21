@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react'
-import { getPosts } from './queries/postsQuery'
+import { getFilms } from './queries/postsQuery'
 import './App.css'
-import Post from './components/Post'
+import Film from './components/Film'
 
 function App() {
-  const [posts, setPosts] = useState(null)
+  const [films, setFilms] = useState(null)
 
   useEffect(() => {
-    getPosts().then(queriedPosts => setPosts(queriedPosts))
+    getFilms().then(films => films.length > 0 && setFilms(films))
   }, [])
 
   return (
     <>
-      {!posts ? (
-        <div>no posts</div>
+      {!films ? (
+        <div>no films</div>
       ) : (
-        posts.map(post => <Post key={post._id} post={post} />)
+        films.map(film => <Film key={film._id} film={film} />)
       )}
     </>
   )

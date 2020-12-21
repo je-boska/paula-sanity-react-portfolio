@@ -1,7 +1,7 @@
 // eslint-disable-next-line
 export default {
-  name: 'post',
-  title: 'Post',
+  name: 'film',
+  title: 'Film',
   type: 'document',
   fields: [
     {
@@ -25,18 +25,28 @@ export default {
       to: { type: 'author' },
     },
     {
-      name: 'mainImage',
-      title: 'Main image',
+      name: 'image1',
+      title: 'Image 1',
       type: 'image',
       options: {
         hotspot: true,
       },
     },
     {
-      name: 'categories',
-      title: 'Categories',
-      type: 'array',
-      of: [{ type: 'reference', to: { type: 'category' } }],
+      name: 'image2',
+      title: 'Image 2',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: 'image3',
+      title: 'Image 3',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
     },
     {
       name: 'publishedAt',
@@ -47,6 +57,11 @@ export default {
       name: 'body',
       title: 'Body',
       type: 'blockContent',
+    },
+    {
+      name: 'embed',
+      title: 'Video Embed',
+      type: 'string',
     },
   ],
 
