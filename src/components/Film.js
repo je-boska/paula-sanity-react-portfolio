@@ -10,10 +10,7 @@ const Film = ({ film }) => {
     <div id={slug.current} className='project'>
       <div className='thumbnails'>
         {thumbnails.map(thumbnail => (
-          <div
-            key={thumbnail.asset._id}
-            className='img-container fade-in-element'
-          >
+          <div key={thumbnail.asset._id} className='img-container to-fade'>
             <img
               className='thumbnail'
               src={thumbnail.asset.url}
@@ -23,10 +20,10 @@ const Film = ({ film }) => {
         ))}
       </div>
       <div
-        className='embed fade-in-element'
+        className='embed to-fade'
         dangerouslySetInnerHTML={{ __html: embed }}
       ></div>
-      <div className='project-text fade-in-element'>
+      <div className='project-text to-fade'>
         <h2>{title}</h2>
         <BlockContent blocks={body} />
       </div>

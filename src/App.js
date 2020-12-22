@@ -5,15 +5,16 @@ import Film from './components/Film'
 import Writing from './components/Writing'
 import Menu from './components/Menu'
 import Contact from './components/Contact'
+import { fadeIn } from './fadeIn'
 
 function App() {
   const [projects, setProjects] = useState(null)
   const [viewContact, setViewContact] = useState(false)
 
   useEffect(() => {
-    getAndSortProjects().then(
-      projects => projects.length > 0 && setProjects(projects)
-    )
+    getAndSortProjects()
+      .then(projects => projects.length > 0 && setProjects(projects))
+      .then(fadeIn)
   }, [])
 
   useEffect(() => {
