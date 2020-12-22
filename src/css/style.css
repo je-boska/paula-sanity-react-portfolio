@@ -13,6 +13,9 @@ body a {
   color: white;
   opacity: 0.65; }
 
+body a:hover {
+  opacity: 1; }
+
 h1 {
   font-weight: 100; }
 
@@ -21,12 +24,40 @@ h2 {
 
 .header {
   position: relative;
-  margin-left: 3%;
-  margin-top: 20px;
+  padding-left: 3%;
+  padding-top: 20px;
   letter-spacing: 0.1rem; }
   .header__title {
     font-size: 1.5rem;
     line-height: 0.95; }
+
+.contact {
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0px;
+  background-color: black;
+  transform: translateY(-300%);
+  transition: all 0.2s ease-in-out; }
+
+.contact p {
+  margin-right: 20px; }
+
+.visible {
+  transform: translateY(-60%); }
+
+.insta-link {
+  transition: opacity 0.2s linear; }
+
+.resume-button {
+  margin-left: 100px;
+  cursor: pointer;
+  opacity: 0.65;
+  transition: opacity 0.2s linear; }
+
+.resume-button:hover {
+  opacity: 1; }
 
 .menu {
   z-index: 1;
@@ -36,7 +67,11 @@ h2 {
   width: 20px;
   cursor: pointer;
   height: 30px;
-  mix-blend-mode: difference; }
+  mix-blend-mode: difference;
+  transition: all 0.2s ease-in-out; }
+
+.menu:hover {
+  opacity: 0.65; }
 
 .menu-line {
   background-color: #fff;
@@ -56,7 +91,7 @@ h2 {
   display: none;
   position: fixed;
   right: 5%;
-  background-color: rgba(0, 0, 0, 0.6); }
+  background-color: rgba(0, 0, 0, 0.8); }
 
 .dropdown-menu h2 {
   padding: 5px; }
@@ -170,37 +205,16 @@ h2 {
 .to-fade {
   opacity: 0; }
 
-footer {
-  line-height: 1.3;
-  margin: 20% 0% 20px 3%;
-  position: relative; }
-
-footer p {
-  opacity: 0.65; }
-
-footer a {
-  transition: opacity 0.2s linear; }
-
-footer a:hover {
-  opacity: 1; }
-
-.resume-button {
-  position: absolute;
-  right: 3%;
-  bottom: 0px;
-  cursor: pointer;
-  opacity: 0.65;
-  transition: opacity 0.2s linear; }
-
-.resume-button:hover {
-  opacity: 1; }
-
 @media only screen and (min-width: 800px) {
   .header {
-    margin-left: 5%;
-    margin-top: 40px; }
+    padding-left: 5%;
+    padding-top: 40px; }
     .header__title {
       font-size: 1.9rem; }
+  .contact {
+    flex-direction: row; }
+  .visible {
+    transform: translateY(-80%); }
   .menu {
     right: 5%;
     top: 35px; }

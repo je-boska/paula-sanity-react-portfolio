@@ -1,11 +1,19 @@
 @media only screen and (min-width: 800px) {
   .header {
-    margin-left: 5%;
-    margin-top: 40px;
+    padding-left: 5%;
+    padding-top: 40px;
 
     &__title {
       font-size: 1.9rem;
     }
+  }
+
+  .contact {
+    flex-direction: row;
+  }
+
+  .visible {
+    transform: translateY(-80%);
   }
 
   .menu {
