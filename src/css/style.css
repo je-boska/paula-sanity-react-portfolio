@@ -13,13 +13,19 @@ body a {
   color: white;
   opacity: 0.65; }
 
+h1 {
+  font-weight: 100; }
+
+h2 {
+  font-weight: 100; }
+
 .header {
   position: relative;
   margin-left: 3%;
   margin-top: 20px;
-  font-size: 1.5rem;
   letter-spacing: 0.1rem; }
   .header__title {
+    font-size: 1.5rem;
     line-height: 0.95; }
 
 .menu {
@@ -81,18 +87,20 @@ body a {
   grid-area: project-text; }
 
 .project-text h2 {
-  font-weight: 100;
   font-size: 1.5rem;
   margin-bottom: 15px;
   line-height: 1.1;
   opacity: 0.9; }
 
 .project-text p {
+  color: rgba(255, 255, 255, 0.65);
   font-size: 1rem;
-  opacity: 0.65;
   line-height: 1.5;
   max-width: 680px;
   margin-bottom: 20px; }
+
+.project-text p strong {
+  color: rgba(255, 255, 255, 0.9); }
 
 .project-text a {
   border-bottom: 1px solid grey;

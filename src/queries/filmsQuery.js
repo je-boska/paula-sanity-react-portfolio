@@ -33,6 +33,5 @@ export const getFilms = async () => {
               order
           }`
   )
-  films.sort((a, b) => b.order - a.order)
   return films
 }
