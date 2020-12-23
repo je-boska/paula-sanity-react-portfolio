@@ -1,4 +1,8 @@
 @media only screen and (min-width: 800px) {
+  .header-hover-zone {
+    margin-left: 3px;
+  }
+
   .header {
     padding-left: 5%;
     padding-top: 40px;
@@ -30,6 +34,10 @@
       '... thumbnails ... project-text ...'
       '... embed ... project-text ...'
       '... ... ... ... ...';
+  }
+
+  .project-text {
+    margin: 35px 0% 20px 0%;
   }
 
   .project-text h2 {
