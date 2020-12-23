@@ -261,7 +261,7 @@ h2 {
   .project-text {
     align-self: start;
     margin-top: 0px; }
-  .project:nth-of-type(2n) {
+  .project:nth-of-type(odd) {
     grid-template-columns: 5% 30% 5% 55% 5%;
     grid-template-areas: '... ... ... ... ...' '... project-text ... thumbnails ...' '... project-text ... embed ...' '... ... ... ... ...'; }
   .writing {
@@ -273,7 +273,7 @@ h2 {
     grid-template-areas: '... ... ... ... ...' '... image ... text ...' '... ... ... ... ...';
     justify-content: center;
     align-items: center; }
-  .writing:nth-of-type(2n) {
+  .writing:nth-of-type(odd) {
     grid-template-columns: 5% 43% 5% 42% 5%;
     grid-template-areas: '... ... ... ... ...' '... text ... image ...' '... ... ... ... ...'; }
   .writing .project-text {
@@ -293,7 +293,7 @@ h2 {
     grid-template-areas: '... ... ... ... ...' '... thumbnails ... ... ...' '... embed ... project-text ...' '... ... ... ... ...'; }
   .project:nth-of-type(1) {
     grid-template-rows: 5% 20% 60% auto; }
-  .project:nth-of-type(2n) {
+  .project:nth-of-type(odd) {
     grid-template-areas: '... ... ... ... ...' '... ... ... thumbnails ...' '... project-text ... embed ...' '... ... ... ... ...'; }
   .project-text h2 {
     margin-bottom: 25px; }
