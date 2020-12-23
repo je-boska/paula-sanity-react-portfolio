@@ -5,7 +5,6 @@ export const fadeIn = () => {
   const init = () => {
     elements = document.querySelectorAll('.to-fade')
     windowHeight = window.innerHeight / 1.2
-    console.log('init')
   }
   const checkPosition = () => {
     for (let i = 0; i < elements.length; i++) {
