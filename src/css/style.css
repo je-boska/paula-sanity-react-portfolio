@@ -22,6 +22,10 @@ h1 {
 h2 {
   font-weight: 100; }
 
+.header-hover-zone {
+  width: 90%;
+  background-color: transparent; }
+
 .header {
   position: relative;
   padding-left: 3%;
@@ -32,7 +36,7 @@ h2 {
     line-height: 0.95; }
 
 .contact {
-  z-index: 1;
+  z-index: 2;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -185,7 +189,8 @@ h2 {
 
 .full-img {
   position: absolute;
-  height: 85%;
+  max-width: 100%;
+  max-height: 85%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

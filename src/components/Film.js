@@ -1,7 +1,7 @@
 import React from 'react'
 import BlockContent from '@sanity/block-content-to-react'
 
-const Film = ({ film }) => {
+const Film = ({ film, setViewFullImg, setFullImgSrc, setFullImgAlt }) => {
   const { image1, image2, image3, title, slug, body, embed } = film
 
   const thumbnails = [image1, image2, image3]
@@ -9,13 +9,17 @@ const Film = ({ film }) => {
   return (
     <div id={slug.current} className='project'>
       <div className='thumbnails'>
-        {thumbnails.map(thumbnail => (
-          <div key={thumbnail.asset._id} className='img-container to-fade'>
-            <img
-              className='thumbnail'
-              src={thumbnail.asset.url}
-              alt={thumbnail.alt}
-            />
+        {thumbnails.map(image => (
+          <div
+            onClick={() => {
+              setViewFullImg(true)
+              setFullImgSrc(image.asset.url)
+              setFullImgAlt(title)
+            }}
+            key={image.asset._id}
+            className='img-container to-fade'
+          >
+            <img className='thumbnail' src={image.asset.url} alt={image.alt} />
           </div>
         ))}
       </div>
