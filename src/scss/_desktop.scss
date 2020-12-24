@@ -139,6 +139,7 @@
 @media only screen and (min-width: 1500px) {
   .project {
     min-height: 100vh;
+    margin: 0px;
     grid-template-rows: auto 20% 60% auto;
     grid-template-areas:
       '... ... ... ... ...'
@@ -157,6 +158,10 @@
       '... ... ... thumbnails ...'
       '... project-text ... embed ...'
       '... ... ... ... ...';
+  }
+
+  .writing {
+    margin: 0px;
   }
 
   .project-text h2 {
