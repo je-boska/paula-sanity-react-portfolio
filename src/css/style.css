@@ -24,10 +24,11 @@ h2 {
 
 .header-hover-zone {
   position: absolute;
+  left: 0px;
   top: 0px;
   height: 70px;
   z-index: 3;
-  width: 80%;
+  width: 90%;
   background-color: transparent; }
 
 .header {
@@ -45,6 +46,7 @@ h2 {
 .contact {
   z-index: 4;
   position: absolute;
+  padding-left: 3vw;
   display: flex;
   flex-direction: column;
   background-color: black;
@@ -216,9 +218,9 @@ main {
       font-size: 1.9rem; }
   .contact {
     flex-direction: row;
-    padding: 10px 0px; }
+    padding: 10px 0px 10px 5vw; }
   .visible {
-    transform: translateY(28%); }
+    transform: translateY(33%); }
   .menu {
     right: 5%;
     top: 20px; }
