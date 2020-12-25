@@ -29,6 +29,7 @@ const Menu = ({ projects, viewContact, setViewContact }) => {
             </a>
           ))}
         <h2
+          style={{ cursor: 'pointer' }}
           onClick={() => {
             toggleMenu()
             setViewContact(!viewContact)
