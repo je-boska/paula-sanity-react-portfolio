@@ -27,7 +27,8 @@ h2 {
   background-color: transparent; }
 
 .header {
-  position: relative;
+  position: absolute;
+  width: 80%;
   padding-left: 3%;
   padding-top: 20px;
   letter-spacing: 0.1rem; }
@@ -100,8 +101,8 @@ h2 {
 .dropdown-menu h2 {
   padding: 5px; }
 
-.back-to-top {
-  cursor: pointer; }
+main {
+  padding-top: 50px; }
 
 .project {
   width: 100%;
@@ -211,8 +212,6 @@ h2 {
   opacity: 0; }
 
 @media only screen and (min-width: 800px) {
-  .header-hover-zone {
-    margin-left: 3px; }
   .header {
     padding-left: 5%;
     padding-top: 40px; }
@@ -225,6 +224,8 @@ h2 {
   .menu {
     right: 5%;
     top: 35px; }
+  main {
+    padding-top: 80px; }
   .project {
     margin-bottom: 100px;
     grid-template-rows: auto 20% 60% auto;
@@ -234,10 +235,6 @@ h2 {
     margin: 35px 0% 20px 0%; }
   .project-text h2 {
     font-size: 1.9rem; }
-  .project-text .year {
-    font-size: 1rem; }
-  .project-text .description {
-    font-size: 1rem; }
   .thumbnails {
     grid-area: thumbnails;
     justify-content: space-between;
@@ -261,7 +258,7 @@ h2 {
   .project-text {
     align-self: start;
     margin-top: 0px; }
-  .project:nth-of-type(odd) {
+  .project:nth-of-type(even) {
     grid-template-columns: 5% 30% 5% 55% 5%;
     grid-template-areas: '... ... ... ... ...' '... project-text ... thumbnails ...' '... project-text ... embed ...' '... ... ... ... ...'; }
   .writing {
@@ -273,7 +270,7 @@ h2 {
     grid-template-areas: '... ... ... ... ...' '... image ... text ...' '... ... ... ... ...';
     justify-content: center;
     align-items: center; }
-  .writing:nth-of-type(odd) {
+  .writing:nth-of-type(even) {
     grid-template-columns: 5% 43% 5% 42% 5%;
     grid-template-areas: '... ... ... ... ...' '... text ... image ...' '... ... ... ... ...'; }
   .writing .project-text {
@@ -292,9 +289,7 @@ h2 {
     margin: 0px;
     grid-template-rows: auto 20% 60% auto;
     grid-template-areas: '... ... ... ... ...' '... thumbnails ... ... ...' '... embed ... project-text ...' '... ... ... ... ...'; }
-  .project:nth-of-type(1) {
-    grid-template-rows: 5% 20% 60% auto; }
-  .project:nth-of-type(odd) {
+  .project:nth-of-type(even) {
     grid-template-areas: '... ... ... ... ...' '... ... ... thumbnails ...' '... project-text ... embed ...' '... ... ... ... ...'; }
   .writing {
     margin: 0px; }
@@ -303,7 +298,7 @@ h2 {
   .project-text .year {
     font-size: 1.3rem;
     margin-bottom: 25px; }
-  .project-text .description {
+  .project-text p {
     font-size: 1.3rem; }
   .link {
     font-size: 1.3rem; }

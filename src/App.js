@@ -6,6 +6,7 @@ import Writing from './components/Writing'
 import Menu from './components/Menu'
 import Contact from './components/Contact'
 import { fadeIn } from './effects/fadeIn'
+import { smoothScroll } from './effects/smoothScroll'
 
 function App() {
   const [projects, setProjects] = useState(null)
@@ -18,6 +19,7 @@ function App() {
     getAndSortProjects()
       .then(projects => projects.length > 0 && setProjects(projects))
       .then(fadeIn)
+      .then(smoothScroll)
   }, [])
 
   useEffect(() => {
@@ -33,34 +35,36 @@ function App() {
 
   return (
     <>
-      <div className='header-hover-zone'>
+      <header className='header-hover-zone'>
         <header className='header'>
           <h1 className='header__title'>PAULA DURINOVA</h1>
           <Contact viewContact={viewContact} />
         </header>
-      </div>
+      </header>
       <Menu projects={projects} />
-      {!projects
-        ? null
-        : projects.map(project =>
-            project.image1 ? (
-              <Film
-                key={project._id}
-                film={project}
-                setViewFullImg={setViewFullImg}
-                setFullImgSrc={setFullImgSrc}
-                setFullImgAlt={setFullImgAlt}
-              />
-            ) : (
-              <Writing key={project._id} writing={project} />
-            )
-          )}
-      <div
-        onClick={() => setViewFullImg(false)}
-        className={`modal ${viewFullImg && 'open'}`}
-      >
-        <img className='full-img' src={fullImgSrc} alt={fullImgAlt}></img>
-      </div>
+      <main>
+        {!projects
+          ? null
+          : projects.map(project =>
+              project.image1 ? (
+                <Film
+                  key={project._id}
+                  film={project}
+                  setViewFullImg={setViewFullImg}
+                  setFullImgSrc={setFullImgSrc}
+                  setFullImgAlt={setFullImgAlt}
+                />
+              ) : (
+                <Writing key={project._id} writing={project} />
+              )
+            )}
+        <div
+          onClick={() => setViewFullImg(false)}
+          className={`modal ${viewFullImg && 'open'}`}
+        >
+          <img className='full-img' src={fullImgSrc} alt={fullImgAlt}></img>
+        </div>
+      </main>
     </>
   )
 }

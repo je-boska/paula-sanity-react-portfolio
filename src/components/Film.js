@@ -7,7 +7,7 @@ const Film = ({ film, setViewFullImg, setFullImgSrc, setFullImgAlt }) => {
   const thumbnails = [image1, image2, image3]
 
   return (
-    <div id={slug.current} className='project'>
+    <section id={slug.current} className='project'>
       <div className='thumbnails'>
         {thumbnails.map(image => (
           <div
@@ -31,7 +31,7 @@ const Film = ({ film, setViewFullImg, setFullImgSrc, setFullImgAlt }) => {
         <h2>{title}</h2>
         <BlockContent blocks={body} />
       </div>
-    </div>
+    </section>
   )
 }
 

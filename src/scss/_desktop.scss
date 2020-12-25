@@ -1,8 +1,4 @@
 @media only screen and (min-width: 800px) {
-  .header-hover-zone {
-    margin-left: 3px;
-  }
-
   .header {
     padding-left: 5%;
     padding-top: 40px;
@@ -25,6 +21,10 @@
     top: 35px;
   }
 
+  main {
+    padding-top: 80px;
+  }
+
   .project {
     margin-bottom: 100px;
     grid-template-rows: auto 20% 60% auto;
@@ -42,14 +42,6 @@
 
   .project-text h2 {
     font-size: 1.9rem;
-  }
-
-  .project-text .year {
-    font-size: 1rem;
-  }
-
-  .project-text .description {
-    font-size: 1rem;
   }
 
   .thumbnails {
@@ -87,7 +79,7 @@
     margin-top: 0px;
   }
 
-  .project:nth-of-type(odd) {
+  .project:nth-of-type(even) {
     grid-template-columns: 5% 30% 5% 55% 5%;
     grid-template-areas:
       '... ... ... ... ...'
@@ -110,7 +102,7 @@
     align-items: center;
   }
 
-  .writing:nth-of-type(odd) {
+  .writing:nth-of-type(even) {
     grid-template-columns: 5% 43% 5% 42% 5%;
     grid-template-areas:
       '... ... ... ... ...'
@@ -148,11 +140,12 @@
       '... ... ... ... ...';
   }
 
-  .project:nth-of-type(1) {
-    grid-template-rows: 5% 20% 60% auto;
-  }
+  // .project:nth-of-type(1) {
+  //   grid-template-rows: 8% 20% 60% auto;
+  //   min-height: 90vh;
+  // }
 
-  .project:nth-of-type(odd) {
+  .project:nth-of-type(even) {
     grid-template-areas:
       '... ... ... ... ...'
       '... ... ... thumbnails ...'
@@ -173,7 +166,7 @@
     margin-bottom: 25px;
   }
 
-  .project-text .description {
+  .project-text p {
     font-size: 1.3rem;
   }
 
