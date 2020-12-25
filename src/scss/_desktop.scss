@@ -1,7 +1,6 @@
 @media only screen and (min-width: 800px) {
   .header {
     padding-left: 5%;
-    padding-top: 40px;
 
     &__title {
       font-size: 1.9rem;
@@ -10,15 +9,16 @@
 
   .contact {
     flex-direction: row;
+    padding: 10px 0px;
   }
 
   .visible {
-    transform: translateY(-80%);
+    transform: translateY(25%);
   }
 
   .menu {
     right: 5%;
-    top: 35px;
+    top: 20px;
   }
 
   .dropdown-menu {
@@ -121,18 +121,13 @@
   .img-writing {
     align-self: center;
   }
-
-  footer {
-    margin-left: 5%;
-    margin-top: 20%;
-  }
-
-  .resume-button {
-    right: 5%;
-  }
 }
 
 @media only screen and (min-width: 1500px) {
+  main {
+    padding-top: 0px;
+  }
+
   .project {
     min-height: 100vh;
     margin: 0px;
@@ -171,10 +166,6 @@
   }
 
   .project-text p {
-    font-size: 1.3rem;
-  }
-
-  .link {
     font-size: 1.3rem;
   }
 

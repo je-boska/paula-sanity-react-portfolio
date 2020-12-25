@@ -7,6 +7,7 @@ import Menu from './components/Menu'
 import Contact from './components/Contact'
 import { fadeIn } from './effects/fadeIn'
 import { smoothScroll } from './effects/smoothScroll'
+import { hideHeader } from './effects/hideHeader'
 
 function App() {
   const [projects, setProjects] = useState(null)
@@ -16,6 +17,7 @@ function App() {
   const [fullImgAlt, setFullImgAlt] = useState('')
 
   useEffect(() => {
+    hideHeader('.header')
     getAndSortProjects()
       .then(projects => projects.length > 0 && setProjects(projects))
       .then(fadeIn)
@@ -35,13 +37,13 @@ function App() {
 
   return (
     <>
-      <header className='header-hover-zone'>
-        <header className='header'>
-          <h1 className='header__title'>PAULA DURINOVA</h1>
+      <header className='header'>
+        <div className='header-hover-zone'>
           <Contact viewContact={viewContact} />
-        </header>
+        </div>
+        <h1 className='header__title'>PAULA DURINOVA</h1>
+        <Menu projects={projects} />
       </header>
-      <Menu projects={projects} />
       <main>
         {!projects
           ? null

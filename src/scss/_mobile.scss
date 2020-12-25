@@ -23,16 +23,22 @@ h2 {
 }
 
 .header-hover-zone {
-  width: 90%;
+  position: absolute;
+  top: 0px;
+  height: 70px;
+  z-index: 3;
+  width: 80%;
   background-color: transparent;
 }
 
 .header {
-  position: absolute;
-  width: 80%;
-  padding-left: 3%;
-  padding-top: 20px;
+  background-color: black;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  padding: 20px 0px 20px 3%;
   letter-spacing: 0.1rem;
+  transition: 0.2s all linear;
 
   &__title {
     font-size: 1.5rem;
@@ -41,11 +47,10 @@ h2 {
 }
 
 .contact {
-  z-index: 2;
+  z-index: 4;
   position: absolute;
   display: flex;
   flex-direction: column;
-  padding: 10px 0px;
   background-color: black;
   transform: translateY(-300%);
   transition: all 0.2s ease-in-out;
@@ -56,33 +61,21 @@ h2 {
 }
 
 .visible {
-  transform: translateY(-60%);
+  transform: translateY(10%);
 }
 
 .insta-link {
   transition: opacity 0.2s linear;
 }
 
-.resume-button {
-  margin-left: 100px;
-  cursor: pointer;
-  opacity: 0.65;
-  transition: opacity 0.2s linear;
-}
-
-.resume-button:hover {
-  opacity: 1;
-}
-
 .menu {
   z-index: 1;
-  position: fixed;
+  position: absolute;
   right: 3%;
-  top: 13px;
+  top: 17px;
   width: 20px;
   cursor: pointer;
   height: 30px;
-  // mix-blend-mode: difference;
   transition: all 0.2s ease-in-out;
 }
 
@@ -100,12 +93,12 @@ h2 {
 }
 
 .menu-line1.open {
-  transform: translateY(12px) rotate(135deg);
+  transform: translateY(10px) rotate(135deg);
 }
 
 .dropdown-menu {
   max-width: 100%;
-  margin-top: 70px;
+  margin-top: 20px;
   padding: 20px;
   z-index: 1;
   display: none;
