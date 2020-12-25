@@ -42,7 +42,11 @@ function App() {
           <Contact viewContact={viewContact} />
         </div>
         <h1 className='header__title'>PAULA DURINOVA</h1>
-        <Menu projects={projects} />
+        <Menu
+          projects={projects}
+          viewContact={viewContact}
+          setViewContact={setViewContact}
+        />
       </header>
       <main>
         {!projects

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Menu = ({ projects }) => {
+const Menu = ({ projects, viewContact, setViewContact }) => {
   const [displayMenu, setDisplayMenu] = useState(false)
 
   const toggleMenu = () => {
@@ -28,6 +28,14 @@ const Menu = ({ projects }) => {
               <h2 className='project-title'>{project.title}</h2>
             </a>
           ))}
+        <h2
+          onClick={() => {
+            toggleMenu()
+            setViewContact(!viewContact)
+          }}
+        >
+          Contact
+        </h2>
       </div>
     </>
   )
