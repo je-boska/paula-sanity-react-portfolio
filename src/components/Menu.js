@@ -19,15 +19,18 @@ const Menu = ({ projects, viewContact, setViewContact }) => {
         style={{ display: `${displayMenu ? 'block' : 'none'}` }}
       >
         {projects &&
-          projects.map(project => (
-            <a
-              onClick={toggleMenu}
-              key={project._id}
-              href={'#' + project.slug.current}
-            >
-              <h2 className='project-title'>{project.title}</h2>
-            </a>
-          ))}
+          projects.map(
+            project =>
+              project.slug && (
+                <a
+                  onClick={toggleMenu}
+                  key={project._id}
+                  href={'#' + project.slug.current}
+                >
+                  <h2 className='project-title'>{project.title}</h2>
+                </a>
+              )
+          )}
         <h2
           style={{ cursor: 'pointer' }}
           onClick={() => {

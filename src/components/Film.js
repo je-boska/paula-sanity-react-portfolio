@@ -6,6 +6,10 @@ const Film = ({ film, setViewFullImg, setFullImgSrc, setFullImgAlt }) => {
 
   const thumbnails = [image1, image2, image3]
 
+  if (!slug) {
+    return <div></div>
+  }
+
   return (
     <section id={slug.current} className='project'>
       <div className='thumbnails'>
